@@ -49,18 +49,18 @@ namespace Ex_Fx_Ab
                 Console.WriteLine();
             }
 
+            double sum = 0.0;
+            Console.WriteLine("TAXES PAID: ");
+
             foreach (TaxPayer taxPayer in list)
             {
+                double tax = taxPayer.Tax();
                 Console.WriteLine(taxPayer.TaxView());
+                sum += tax;
             }
 
-            /*double TotalTax, sum;
-
-            foreach (TaxPayer taxPayer in list)
-            {
-
-                TotalTax += sum
-            }*/
+            Console.WriteLine();
+            Console.WriteLine("TOTAL TAXES: $ " + sum.ToString("F2", CultureInfo.InvariantCulture));
         }
     }
 }
